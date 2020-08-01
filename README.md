@@ -5,8 +5,9 @@ Improved code to use B button and display more data on Adafruit's Mini Color PiT
 
 ## Improvements include
 1. Changed default font to one that allows 6 lines of readable text.
+2. Removed a few extra lines of code that seemed to be from a different project.
 
-## Added the following function
+## Added the following functions
 1. Button A single press, release returns to Default View.
    - Time:       <---- Current time
    - Hostname    <---- Hostname of PiHole Server
@@ -25,8 +26,6 @@ Improved code to use B button and display more data on Adafruit's Mini Color PiT
      
 3. Button B Long press turns display off, press button A to enable display.
 4. Button A and Button B press, show blue color, used as screen reset, useful if screen ever has artifacts
-5. Removed a few extra lines of code that seemed to be from a different project.
-
 
 ###### Original code is from Adafruit's Pi Hole Ad Blocker with Pi Zero W guide.
 https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w?view=all#install-mini-pitft
