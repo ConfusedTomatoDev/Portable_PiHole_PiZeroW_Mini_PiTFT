@@ -31,15 +31,9 @@ Improved code to use B button and display more data on Adafruit's Mini Color PiT
 ###### Original code is from Adafruit's Pi Hole Ad Blocker with Pi Zero W guide.
 https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w?view=all#install-mini-pitft
 <br>
-## Deafult_view
-<br>
+#### Deafult_view.
 ![Portable_PiHole_PiZeroW_Mini_PiTFT](/images/default_view.jpg?raw=true "Completed Project")
-<br>
-## Button A long press.
-<br>
+#### Button A long press.
 ![Portable_PiHole_PiZeroW_Mini_PiTFT](/images/button_a_long_press.jpg?raw=true "Completed Project")
-<br>
-## Button B long press.
-<br>
+#### Button B long press.
 ![Portable_PiHole_PiZeroW_Mini_PiTFT](/images/button_b_long_press.jpg?raw=true "Completed Project") 
-<br>
