@@ -1,5 +1,3 @@
-
-
 # Portable_PiHole_PiZeroW_Mini_PiTFT
 Improved code to use B button and display more data on Adafruit's Mini Color PiTFT Ad Blocking Pi-Hole Kit.
 
