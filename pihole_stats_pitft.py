@@ -72,7 +72,7 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 
 while True:
-    # Draw a black filled box to clear the image.
+    # Draw a black filled box to clear the image, blue with two buttons is done later in the code.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     # Shell scripts for system monitoring from here:
