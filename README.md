@@ -8,7 +8,7 @@ Improved code to use B button and display more data on Adafruit's Mini Color PiT
 ## Added the following functions
 1. Button A single press, release returns to Default View.
    - Time:       <---- Current time
-   - Hostname    <---- Hostname of PiHole Server
+   - Hostname WiFi SSID    <---- Hostname of PiHole Server and connected WiFi SSID
    - Ads Blocked <---- Number of Ads Blocked
    - Clients     <---- Number of clients connected using PiHole
    - DNS Queries <---- DNS Queries Blocked
