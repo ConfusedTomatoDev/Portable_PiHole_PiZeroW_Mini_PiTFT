@@ -72,7 +72,7 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 
 while True:
-    # Draw a black filled box to clear the image, blue with two buttons is done later in the code.
+    # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     # Shell scripts for system monitoring from here:
@@ -84,8 +84,12 @@ while True:
     TNOW = "Time: "+subprocess.check_output(cmd, shell=True).decode("utf-8")
     cmd = "hostname -I | cut -d\' \' -f1"
     IP = "IP: "+subprocess.check_output(cmd, shell=True).decode("utf-8")
-    cmd = "hostname | tr [:lower:] [:upper:] #\'\\n\'"
+    #cmd = "hostname | tr [:lower:] [:upper:] #\'\\n\'"
+    cmd = "hostname"# | tr [:lower:] [:upper:]"
     HOST = subprocess.check_output(cmd, shell=True).decode("utf-8")
+    cmd = "iwgetid -r"# | tr [:lower:] [:upper:]"
+    SSID = subprocess.check_output(cmd, shell=True).decode("utf-8")
+    HS = 'H: ' + HOST.strip() + ' ' + 'W: ' + SSID.strip()
     cmd = "top -bn1 | grep load | awk '{printf \"CPU Load: %.2f\", $(NF-2)}'"
     CPU = subprocess.check_output(cmd, shell=True).decode("utf-8")
     #cmd = "free -m | awk 'NR==2{printf \"Mem: %s/%s MB  %.2f%%\", $3,$2,$3*100/$2 }'"
@@ -133,8 +137,8 @@ while True:
         y += font.getsize(TNOW)[1]
         #draw.text((x, y), IP, font=font, fill="#FFFF00")
         #y += font.getsize(IP)[1]
-        draw.text((x, y), HOST, font=font, fill="#FFFF00")
-        y += font.getsize(HOST)[1]
+        draw.text((x, y), HS, font=font, fill="#FFFF00")
+        y += font.getsize(HS)[1]
         draw.text((x, y), "Ads Blocked: {}".format(str(ADSBLOCKED)), font=font, fill="#00FF00")
         y += font.getsize(str(ADSBLOCKED))[1]
         draw.text((x, y), "Clients: {}".format(str(CLIENTS)), font=font, fill="#0000FF")
@@ -144,7 +148,7 @@ while True:
         draw.text((x, y), "BLK List: {}".format(str(TOTALBLKLIST)), font=font, fill="#FF8000")
         y += font.getsize(str(TOTALBLKLIST))[1]
     if not buttonB.value:
-        backlight.value = False 
+        backlight.value = False
     if not buttonA.value: 
         backlight.value = True
     if not buttonA.value and not buttonB.value:
@@ -153,4 +157,4 @@ while True:
     # Display image.
     disp.image(image, rotation)
     time.sleep(.1)
-
+    
