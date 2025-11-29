@@ -1,4 +1,7 @@
 # Portable_PiHole_PiZeroW_Mini_PiTFT
+
+# NOTE: This tool uses the older Pi-Hole API in order to obtain it's status and is currently not working.  When time permits the I may update the tool.
+
 Improved code to use B button and display more data on Adafruit's Mini Color PiTFT Ad Blocking Pi-Hole Kit.
 
 ## Improvements include
